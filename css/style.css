@@ -1,0 +1,74 @@
+body {
+    background-image: url("./desktop.jpg");
+    background-size: cover;
+    background-position: fixed;
+    overflow: hidden; 
+}
+
+#desktop {
+    position: relative;
+    height: 655px;
+}
+
+#login_panel {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 23px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    z-index: 1000;
+    background-color:rgb(128, 125, 125);
+    size: 9px;
+    color: white;
+}
+
+#loginButton {
+    display: inline;
+    background-color: rgb(206, 226, 180);
+    border: solid black 1px;
+    margin: 1px;
+    padding: 2px;
+}
+
+#status {
+    display: inline;
+}
+
+#app_panel {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 35px;
+    padding-bottom: 11px;
+    z-index: 1000;
+    background-color: rgb(128, 125, 125);
+}
+
+#app_wrapper {
+    display: table; 
+	margin: 0 auto;
+}
+
+#app_range {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+#app_range li {
+    display: inline-block;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    transition: transform .2s;
+    cursor: pointer;
+} 
+
+.icon:hover {
+    transform: scale(1.5);
+}
