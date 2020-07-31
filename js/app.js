@@ -2,7 +2,6 @@
 import './window-frame.js'
 import './login-field.js'
 import './memory-board.js'
-import './chat-app.js'
 import './calculation-game.js'
 
 // Login & Logoff button
@@ -41,7 +40,6 @@ let windowCounter = 0
 
 // Applications start buttons
 const memoryGameButton = document.querySelector('#memoryGameIcon')
-const chatButton = document.querySelector('#chatIcon')
 const calculationGameButton = document.querySelector('#calculationGameIcon')
 
 // Buttons listen for events:
@@ -51,11 +49,6 @@ memoryGameButton.addEventListener('click', e => {
   windowCounter++
 })
 
-chatButton.addEventListener('click', e => {
-  const chat = document.createElement('chat-app')
-  document.querySelector('#desktop').appendChild(chat)
-  windowCounter++
-})
 
 calculationGameButton.addEventListener('click', e => {
   const calculationGame = document.createElement('calculation-game')
