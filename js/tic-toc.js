@@ -12,7 +12,6 @@ template.innerHTML =
     style="
       width:fit-content; 
       height:fit-content;
-      display: table; 
       margin: 0 auto;
       margin-top: 15px;
       background-color: white;
