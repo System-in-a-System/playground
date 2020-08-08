@@ -115,7 +115,7 @@ export class TicToc extends WindowFrame {
 
     // Squares are listening for events
     this._topLeft.addEventListener('click', e => {
-      this.makeAMove(this._topLeft)
+      this.makeAMove()
     })
 
 
@@ -142,12 +142,12 @@ export class TicToc extends WindowFrame {
    * 
    * @memberof TicToc
    */
-  makeAMove (target) {
+  makeAMove () {
     if (this._cross) {
-      target.textContent = 'X'
+      this.textContent = 'X'
       this._cross = false
     } else {
-      target.textContent = '0'
+      this.textContent = '0'
       this._cross = true
     }
   }
