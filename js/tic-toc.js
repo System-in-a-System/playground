@@ -100,6 +100,9 @@ export class TicToc extends WindowFrame {
 
     // Retrieve the nickname from local storage or set it to default 'Unknown Hero'
     this._nickname = window.localStorage.getItem('nickname') || 'Unknown Hero'
+
+    // Set starting figure to a cross
+    this._cross = true;
   }
 
   /**
@@ -110,10 +113,17 @@ export class TicToc extends WindowFrame {
   connectedCallback () {
     this.positionElement()
 
+    // Squares are listening for events
+    this._topLeft.addEventListener('click', e => {
+      this.makeAMove(this._topLeft)
+    })
+
+
     // Control panel buttons are listening for events:
     this._newGameButton.addEventListener('click', e => {
       this.restartTheGame()
     })
+
 
     // Window frame is listening for refocusing & dragging & canceling
     this.listenForDragging()
@@ -127,6 +137,22 @@ export class TicToc extends WindowFrame {
     })
   }
   
+  /**
+   * Makes a move
+   * 
+   * @memberof TicToc
+   */
+  makeAMove (target) {
+    if (this._cross) {
+      target.textContent = 'X'
+      this._cross = false
+    } else {
+      target.textContent = '0'
+      this._cross = true
+    }
+  }
+
+
   /**
    * Clears up current game statistical information & Restarts the game
    *
