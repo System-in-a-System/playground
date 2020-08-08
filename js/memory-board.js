@@ -210,7 +210,7 @@ class MemoryBoard extends WindowFrame {
         this.checkForMatching()
 
         // If all pairs are matched, finish the game
-        if (this._matchedPairs.length === 16) {
+        if (this._matchedPairs.length === 14) {
           this.finishTheGame()
         }
         e.preventDefault()
