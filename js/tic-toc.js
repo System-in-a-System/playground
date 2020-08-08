@@ -20,21 +20,21 @@ template.innerHTML =
       border-width: 0.5px;
       border-color: black;">
 
-        <div id="topLeft" style="display: inline-block; height=50px; border-style: solid; border-width: 0.3px; border-color: black;"></div>
-        <div id="topMiddle" style="display: inline-block; height=50px; border-style: solid; border-width: 0.3px; border-color: black;"></div>
-        <div id="topRight" style="display: inline-block; height=50px; border-style: solid; border-width: 0.3px; border-color: black;"></div>
+        <div id="topLeft" style="display: inline-block; height: 50px; border-style: solid; border-width: 0.3px; border-color: black;"></div>
+        <div id="topMiddle" style="display: inline-block; height: 50px; border-style: solid; border-width: 0.3px; border-color: black;"></div>
+        <div id="topRight" style="display: inline-block; height: 50px; border-style: solid; border-width: 0.3px; border-color: black;"></div>
 
         <br>
 
-        <div id="middleLeft" style="display: inline-block; height=50px; border-style: solid; border-width: 0.3px; border-color: black;"></div>
-        <div id="middleMiddle" style="display: inline-block; height=50px; border-style: solid; border-width: 0.3px; border-color: black;"></div>
-        <div id="middleRight" style="display: inline-block; height=50px; border-style: solid; border-width: 0.3px; border-color: black;"></div>
+        <div id="middleLeft" style="display: inline-block; height: 50px; border-style: solid; border-width: 0.3px; border-color: black;"></div>
+        <div id="middleMiddle" style="display: inline-block; height: 50px; border-style: solid; border-width: 0.3px; border-color: black;"></div>
+        <div id="middleRight" style="display: inline-block; height: 50px; border-style: solid; border-width: 0.3px; border-color: black;"></div>
 
         <br>
 
-        <div id="bottomLeft" style="display: inline-block; height=50px; border-style: solid; border-width: 0.3px; border-color: black;"></div>
-        <div id="bottomMiddle" style="display: inline-block; height=50px; border-style: solid; border-width: 0.3px; border-color: black;"></div>
-        <div id="bottomRight" style="display: inline-block; height=50px; border-style: solid; border-width: 0.3px; border-color: black;"></div>
+        <div id="bottomLeft" style="display: inline-block; height: 50px; border-style: solid; border-width: 0.3px; border-color: black;"></div>
+        <div id="bottomMiddle" style="display: inline-block; height: 50px; border-style: solid; border-width: 0.3px; border-color: black;"></div>
+        <div id="bottomRight" style="display: inline-block; height: 50px; border-style: solid; border-width: 0.3px; border-color: black;"></div>
   </div>
 
 
