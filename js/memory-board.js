@@ -417,7 +417,11 @@ class MemoryBoard extends WindowFrame {
     // Clear space for further score information
     this._statistics.remove()
 
-    if (this._gameSpace.querySelectorAll('div').length > 0) {
+    if(gameIsOverAnnouncement) {
+      return
+    }
+    
+    if (this._gameSpace.querySelectorAll('div').length > 1) {
       return
     }
 
