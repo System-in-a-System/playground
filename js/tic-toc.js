@@ -114,46 +114,47 @@ export class TicToc extends WindowFrame {
 
     // Squares are listening for events
     this._topLeft.addEventListener('click', e => {
-      this._topLeft.makeAMove()
+      this._topLeft.textContent = this.makeAMove()
+      e.preventDefault()
     })
 
     this._topMiddle.addEventListener('click', e => {
-      this._topMiddle.makeAMove()
+      this._topMiddle.textContent = this.makeAMove()
       e.preventDefault()
     })
 
     this._topRight.addEventListener('click', e => {
-      this._topRight.makeAMove()
+      this._topRight.textContent = this.makeAMove()
       e.preventDefault()
     })
 
     this._middleLeft.addEventListener('click', e => {
-      this._middleLeft.makeAMove()
+      this._middleLeft.textContent = this.makeAMove()
       e.preventDefault()
     })
 
     this._middleMiddle.addEventListener('click', e => {
-      this._middleMiddle.makeAMove()
+      this._middleMiddle.textContent = this.makeAMove()
       e.preventDefault()
     })
 
     this._middleRight.addEventListener('click', e => {
-      this._middleRight.makeAMove()
+      this._middleRight.textContent = this.makeAMove()
       e.preventDefault()
     })
     
     this._bottomLeft.addEventListener('click', e => {
-      this._bottomLeft.makeAMove()
+      this._bottomLeft.textContent = this.makeAMove()
       e.preventDefault()
     })
 
     this._bottomMiddle.addEventListener('click', e => {
-      this._bottomMiddle.makeAMove()
+      this._bottomMiddle.textContent = this.makeAMove()
       e.preventDefault()
     })
 
     this._bottomRight.addEventListener('click', e => {
-      this._bottomRight.makeAMove()
+      this._bottomRight.textContent = this.makeAMove()
       e.preventDefault()
     })
 
@@ -182,13 +183,17 @@ export class TicToc extends WindowFrame {
    * @memberof TicToc
    */
   makeAMove () {
+    let sign = ''
+
     if (this._cross) {
-      this.textContent = 'X'
+      sign = 'X'
       this._cross = false
     } else {
-      this.textContent = '0'
+      sign = '0'
       this._cross = true
     }
+
+    return sign
   }
 
 
