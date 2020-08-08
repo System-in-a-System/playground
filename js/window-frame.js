@@ -149,7 +149,7 @@ export class WindowFrame extends window.HTMLElement {
     document.addEventListener('mousemove', e => {
       if (mouseIsDown) {
         this._frame.style.left = (e.clientX + offset[0]) + 'px'
-        this._frame.style.top = (e.clientY + offset[1]) + 'px'
+        this._frame.style.top = (e.clientY + offset[0]) + 'px'
       }
     })
   }
