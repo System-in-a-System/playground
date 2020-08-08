@@ -119,34 +119,42 @@ export class TicToc extends WindowFrame {
 
     this._topMiddle.addEventListener('click', e => {
       this._topMiddle.makeAMove()
+      e.preventDefault()
     })
 
     this._topRight.addEventListener('click', e => {
       this._topRight.makeAMove()
+      e.preventDefault()
     })
 
     this._middleLeft.addEventListener('click', e => {
       this._middleLeft.makeAMove()
+      e.preventDefault()
     })
 
     this._middleMiddle.addEventListener('click', e => {
       this._middleMiddle.makeAMove()
+      e.preventDefault()
     })
 
     this._middleRight.addEventListener('click', e => {
       this._middleRight.makeAMove()
+      e.preventDefault()
     })
     
     this._bottomLeft.addEventListener('click', e => {
       this._bottomLeft.makeAMove()
+      e.preventDefault()
     })
 
     this._bottomMiddle.addEventListener('click', e => {
       this._bottomMiddle.makeAMove()
+      e.preventDefault()
     })
 
     this._bottomRight.addEventListener('click', e => {
       this._bottomRight.makeAMove()
+      e.preventDefault()
     })
 
 
@@ -176,11 +184,9 @@ export class TicToc extends WindowFrame {
   makeAMove () {
     if (this._cross) {
       this.textContent = 'X'
-      // this.textContent = 'X'
       this._cross = false
     } else {
       this.textContent = '0'
-      // this.textContent = '0'
       this._cross = true
     }
   }
