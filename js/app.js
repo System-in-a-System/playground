@@ -3,6 +3,7 @@ import './window-frame.js'
 import './login-field.js'
 import './memory-board.js'
 import './calculation-game.js'
+import './tic-toc.js'
 
 // Login & Logoff button
 const loginButton = document.querySelector('#loginButton')
@@ -41,6 +42,7 @@ let windowCounter = 0
 // Applications start buttons
 const memoryGameButton = document.querySelector('#memoryGameIcon')
 const calculationGameButton = document.querySelector('#calculationGameIcon')
+const tictocButton = document.querySelector('#tictocIcon')
 
 // Buttons listen for events:
 memoryGameButton.addEventListener('click', e => {
@@ -53,6 +55,12 @@ memoryGameButton.addEventListener('click', e => {
 calculationGameButton.addEventListener('click', e => {
   const calculationGame = document.createElement('calculation-game')
   document.querySelector('#desktop').appendChild(calculationGame)
+  windowCounter++
+})
+
+tictocButton.addEventListener('click', e => {
+  const tictocGame = document.createElement('tic-toc')
+  document.querySelector('#desktop').appendChild(tictocGame)
   windowCounter++
 })
 
