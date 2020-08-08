@@ -410,18 +410,15 @@ class MemoryBoard extends WindowFrame {
   finishTheGame () {
     // Disable pointer events for the game board
     this._board.style.pointerEvents = 'none'
+    
 
     // Clear interval
     clearInterval(this._currentTimer)
 
     // Clear space for further score information
     this._statistics.remove()
-
-    if(gameIsOverAnnouncement) {
-      return
-    }
     
-    if (this._gameSpace.querySelectorAll('div').length > 1) {
+    if (this._contentBlock.querySelectorAll('div').length > 2) {
       return
     }
 
