@@ -117,6 +117,38 @@ export class TicToc extends WindowFrame {
       this.makeAMove()
     })
 
+    this._topMiddle.addEventListener('click', e => {
+      this.makeAMove()
+    })
+
+    this._topRight.addEventListener('click', e => {
+      this.makeAMove()
+    })
+
+    this._middleLeft.addEventListener('click', e => {
+      this.makeAMove()
+    })
+
+    this._middleMiddle.addEventListener('click', e => {
+      this.makeAMove()
+    })
+
+    this._middleRight.addEventListener('click', e => {
+      this.makeAMove()
+    })
+    
+    this._bottomLeft.addEventListener('click', e => {
+      this.makeAMove()
+    })
+
+    this._bottomMiddle.addEventListener('click', e => {
+      this.makeAMove()
+    })
+
+    this._bottomRight.addEventListener('click', e => {
+      this.makeAMove()
+    })
+
 
     // Control panel buttons are listening for events:
     this._newGameButton.addEventListener('click', e => {
