@@ -210,7 +210,7 @@ class MemoryBoard extends WindowFrame {
         this.checkForMatching()
 
         // If all pairs are matched, finish the game
-        if (this._matchedPairs.length === 14) {
+        if (this._matchedPairs.length === 16) {
           this.finishTheGame()
         }
         e.preventDefault()
@@ -417,7 +417,7 @@ class MemoryBoard extends WindowFrame {
     // Clear space for further score information
     this._statistics.remove()
 
-    if (this._gameSpace.querySelectorAll('div').length > 1) {
+    if (this._gameSpace.querySelectorAll('div').length > 0) {
       return
     }
 
