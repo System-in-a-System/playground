@@ -10,15 +10,11 @@ template.innerHTML =
   
   <div id="tictocPlayground"
     style="
-      width: 170px; 
-      height: 170px;
+      width: 166px; 
+      height: 166px;
       padding: 1px;
       margin: 0 auto;
-      margin-top: 15px;
-      background-color: white;
-      border-style: solid;
-      border-width: 0.5px;
-      border-color: black;">
+      margin-top: 15px;">
 
         <div id="topLeft" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black;">&nbsp;</div>
         <div id="topMiddle" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black;">&nbsp;</div>
