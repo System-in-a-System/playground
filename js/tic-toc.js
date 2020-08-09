@@ -83,15 +83,6 @@ export class TicToc extends WindowFrame {
     this._bottomRight = this._contentBlock.querySelector('#bottomRight');
 
     this._statistics = this._contentBlock.querySelector('#tictocStatistics')
-
-    // Generate buttons
-    this._newGameButton = document.createElement('button')
-    this._newGameButton.textContent = 'New Game'
-    this._newGameButton.style.margin = '1px'
-    this._newGameButton.style.marginRight = '2px'
-    this._newGameButton.style.marginLeft = '2px'
-
-    this._controlPanel.appendChild(this._newGameButton)
  
 
     // Retrieve the nickname from local storage or set it to default 'Unknown Hero'
@@ -191,13 +182,6 @@ export class TicToc extends WindowFrame {
       e.preventDefault()
     })
 
-
-    // Control panel buttons are listening for events:
-    this._newGameButton.addEventListener('click', e => {
-      this.restartTheGame()
-    })
-
-
     // Window frame is listening for refocusing & dragging & canceling
     this.listenForDragging()
 
@@ -236,9 +220,7 @@ export class TicToc extends WindowFrame {
   checkForMatch() {
 
     // Matching horizontal lines
-    if(this._topLeft.textContent === 'X' || this._topLeft.textContent === '0' 
-      && this._topMiddle.textContent === 'X' || this._topMiddle.textContent === '0' 
-      && this._topRight.textContent === 'X' || this._topRight.textContent === '0') {
+    if(this._topLeft.textContent === 'X' || this._topLeft.textContent === '0') {
         
       if(this._topLeft.textContent === this._topMiddle.textContent && this._topMiddle.textContent === this._topRight.textContent) {
         this._topLeft.style.backgroundColor = 'green'
@@ -249,7 +231,7 @@ export class TicToc extends WindowFrame {
       }
     }
 
-    if(!this._middleLeft.textContent === ' ' && !this._middleMiddle.textContent === ' ' && !this._middleRight.textContent === ' ') {
+    if(this._middleLeft.textContent === 'X' || this._middleLeft.textContent === '0') {
       
       if(this._middleLeft.textContent === this._middleMiddle.textContent && this._middleMiddle.textContent === this._middleRight.textContent) {
         this._middleLeft.style.backgroundColor = 'green'
@@ -260,7 +242,7 @@ export class TicToc extends WindowFrame {
       }
     }
 
-    if(!this._bottomLeft.textContent === ' ' && !this._bottomMiddle.textContent === ' ' && !this._bottomRight.textContent === ' ') {
+    if(this._bottomLeft.textContent === 'X' || this._bottomLeft.textContent === '0') {
       
       if(this._bottomLeft.textContent === this._bottomMiddle.textContent && this._bottomMiddle.textContent === this._bottomRight.textContent) {
         this._bottomLeft.style.backgroundColor = 'green'
@@ -272,7 +254,7 @@ export class TicToc extends WindowFrame {
     }
 
     // Matching vertical lines
-    if(!this._topLeft.textContent === ' ' && !this._middleLeft.textContent === ' ' && !this._bottomLeft.textContent === ' ') {
+    if(this._topLeft.textContent === 'X' || this._topLeft.textContent === '0') {
       
       if(this._topLeft.textContent === this._middleLeft.textContent && this._middleLeft.textContent == this._bottomLeft.textContent) {
         this._topLeft.style.backgroundColor = 'green'
@@ -283,7 +265,7 @@ export class TicToc extends WindowFrame {
       }
     }
 
-    if(!this._topMiddle.textContent === ' ' && !this._middleMiddle.textContent === ' ' && !this._bottomMiddle.textContent === ' ') {
+    if(this._topMiddle.textContent === 'X' || this._topMiddle.textContent === '0') {
       
       if(this._topMiddle.textContent === this._middleMiddle.textContent && this._middleMiddle.textContent == this._bottomMiddle.textContent) {
         this._topMiddle.style.backgroundColor = 'green'
@@ -294,7 +276,7 @@ export class TicToc extends WindowFrame {
       }
     }
 
-    if(!this._topRight.textContent === ' ' && !this._middleRight.textContent === ' ' && !this._bottomRight.textContent === ' ') {
+    if(this._topRight.textContent === 'X' || this._topRight.textContent === '0') {
       
       if(this._topRight.textContent === this._middleRight.textContent && this._middleRight.textContent == this._bottomRight.textContent) {
         this._topRight.style.backgroundColor = 'green'
@@ -306,7 +288,7 @@ export class TicToc extends WindowFrame {
     }
     
     // Matching diagonal lines
-    if(!this._topLeft.textContent === ' ' && !this._middleMiddle.textContent === ' ' && !this._bottomRight.textContent === ' ') {
+    if(this._middleMiddle.textContent === 'X' || this._middleMiddle.textContent === '0') {
       
       if(this._topLeft.textContent === this._middleMiddle.textContent && this._middleMiddle.textContent === this._bottomRight.textContent) {
         this._topLeft.style.backgroundColor = 'green'
@@ -315,10 +297,7 @@ export class TicToc extends WindowFrame {
 
         this.finishTheGame();
       }
-    }
 
-    if(!this._topRight.textContent === ' ' && !this._middleMiddle.textContent === ' ' && !this._bottomLeft.textContent === ' ') {
-      
       if(this._topRight.textContent === this._middleMiddle.textContent && this._middleMiddle.textContent === this._bottomLeft.textContent) {
         this._topRight.style.backgroundColor = 'green'
         this._middleMiddle.style.backgroundColor = 'green'
@@ -327,16 +306,6 @@ export class TicToc extends WindowFrame {
         this.finishTheGame();
       }
     }
-  }
-
-  /**
-   * Clears up current game statistical information & Restarts the game
-   *
-   * @memberof TicToc
-   */
-  restartTheGame () {
-    this._tictocPlayground.querySelectorAll('div').textContent = ''
-    this._statistics.textContent = ''
   }
 
   /**
