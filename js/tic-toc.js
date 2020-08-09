@@ -25,15 +25,15 @@ template.innerHTML =
 
         <br>
 
-        <div id="middleLeft" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black;"></div>
-        <div id="middleMiddle" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black;"></div>
-        <div id="middleRight" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black;"></div>
+        <div id="middleLeft" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black;">&nbsp;</div>
+        <div id="middleMiddle" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black;">&nbsp;</div>
+        <div id="middleRight" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black;">&nbsp;</div>
 
         <br>
 
-        <div id="bottomLeft" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black;"></div>
-        <div id="bottomMiddle" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black;"></div>
-        <div id="bottomRight" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black;"></div>
+        <div id="bottomLeft" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black;">&nbsp;</div>
+        <div id="bottomMiddle" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black;">&nbsp;</div>
+        <div id="bottomRight" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black;">&nbsp;</div>
   </div>
 
 
