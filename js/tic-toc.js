@@ -19,9 +19,9 @@ template.innerHTML =
       border-width: 0.5px;
       border-color: black;">
 
-        <div id="topLeft" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black;">n</div>
-        <div id="topMiddle" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black;">n</div>
-        <div id="topRight" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black;">n</div>
+        <div id="topLeft" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black;">&nbsp;</div>
+        <div id="topMiddle" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black;">&nbsp;</div>
+        <div id="topRight" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black;">&nbsp;</div>
 
         <br>
 
