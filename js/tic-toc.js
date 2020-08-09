@@ -113,46 +113,81 @@ export class TicToc extends WindowFrame {
     this._topLeft.addEventListener('click', e => {
       this._topLeft.textContent = this.makeAMove()
       this._topLeft.style.pointerEvents = 'none'
+
+      this.checkForMatch()
+
       e.preventDefault()
     })
 
     this._topMiddle.addEventListener('click', e => {
       this._topMiddle.textContent = this.makeAMove()
+      this._topMiddle.style.pointerEvents = 'none'
+
+      this.checkForMatch()
+
       e.preventDefault()
     })
 
     this._topRight.addEventListener('click', e => {
       this._topRight.textContent = this.makeAMove()
+      this._topRight.style.pointerEvents = 'none'
+
+      this.checkForMatch()
+
       e.preventDefault()
     })
 
     this._middleLeft.addEventListener('click', e => {
       this._middleLeft.textContent = this.makeAMove()
+      this._middleLeft.style.pointerEvents = 'none'
+
+      this.checkForMatch()
+
       e.preventDefault()
     })
 
     this._middleMiddle.addEventListener('click', e => {
       this._middleMiddle.textContent = this.makeAMove()
+      this._middleMiddle.style.pointerEvents = 'none'
+
+      this.checkForMatch()
+
       e.preventDefault()
     })
 
     this._middleRight.addEventListener('click', e => {
       this._middleRight.textContent = this.makeAMove()
+      this._middleRight.style.pointerEvents = 'none'
+
+      this.checkForMatch()
+
       e.preventDefault()
     })
     
     this._bottomLeft.addEventListener('click', e => {
       this._bottomLeft.textContent = this.makeAMove()
+      this._bottomLeft.style.pointerEvents = 'none'
+
+      this.checkForMatch()
+
       e.preventDefault()
     })
 
     this._bottomMiddle.addEventListener('click', e => {
       this._bottomMiddle.textContent = this.makeAMove()
+      this._bottomMiddle.style.pointerEvents = 'none'
+
+      this.checkForMatch()
+
       e.preventDefault()
     })
 
     this._bottomRight.addEventListener('click', e => {
       this._bottomRight.textContent = this.makeAMove()
+      this._bottomRight.style.pointerEvents = 'none'
+
+      this.checkForMatch()
+      
       e.preventDefault()
     })
 
@@ -194,6 +229,103 @@ export class TicToc extends WindowFrame {
     return sign
   }
 
+  /** Checks if the preceding move made a match in some of the lines 
+   * 
+   * @memberof TicToc
+  */
+  checkForMatch() {
+
+    // Matching horizontal lines
+    if(!this._topLeft.textContent === ' ' && !this._topMiddle.textContent === ' ' && !this._topRight.textContent === ' ') {
+        
+      if(this._topLeft.textContent === this._topMiddle.textContent && this._topMiddle.textContent === this._topRight.textContent) {
+        this._topLeft.style.backgroundColor = 'green'
+        this._topMiddle.style.backgroundColor = 'green'
+        this._topRight.style.backgroundColor = 'green'
+
+        this.finishTheGame();
+      }
+    }
+
+    if(!this._middleLeft.textContent === ' ' && !this._middleMiddle.textContent === ' ' && !this._middleRight.textContent === ' ') {
+      
+      if(this._middleLeft.textContent === this._middleMiddle.textContent && this._middleMiddle.textContent === this._middleRight.textContent) {
+        this._middleLeft.style.backgroundColor = 'green'
+        this._middleMiddle.style.backgroundColor = 'green'
+        this._middleRight.style.backgroundColor = 'green'
+
+        this.finishTheGame();
+      }
+    }
+
+    if(!this._bottomLeft.textContent === ' ' && !this._bottomMiddle.textContent === ' ' && !this._bottomRight.textContent === ' ') {
+      
+      if(this._bottomLeft.textContent === this._bottomMiddle.textContent && this._bottomMiddle.textContent === this._bottomRight.textContent) {
+        this._bottomLeft.style.backgroundColor = 'green'
+        this._bottomMiddle.style.backgroundColor = 'green'
+        this._bottomRight.style.backgroundColor = 'green'
+
+        this.finishTheGame();
+      }
+    }
+
+    // Matching vertical lines
+    if(!this._topLeft.textContent === ' ' && !this._middleLeft.textContent === ' ' && !this._bottomLeft.textContent === ' ') {
+      
+      if(this._topLeft.textContent === this._middleLeft.textContent && this._middleLeft.textContent == this._bottomLeft.textContent) {
+        this._topLeft.style.backgroundColor = 'green'
+        this._middleLeft.style.backgroundColor = 'green'
+        this._bottomLeft.style.backgroundColor = 'green'
+
+        this.finishTheGame();
+      }
+    }
+
+    if(!this._topMiddle.textContent === ' ' && !this._middleMiddle.textContent === ' ' && !this._bottomMiddle.textContent === ' ') {
+      
+      if(this._topMiddle.textContent === this._middleMiddle.textContent && this._middleMiddle.textContent == this._bottomMiddle.textContent) {
+        this._topMiddle.style.backgroundColor = 'green'
+        this._middleMiddle.style.backgroundColor = 'green'
+        this._bottomMiddle.style.backgroundColor = 'green'
+
+        this.finishTheGame();
+      }
+    }
+
+    if(!this._topRight.textContent === ' ' && !this._middleRight.textContent === ' ' && !this._bottomRight.textContent === ' ') {
+      
+      if(this._topRight.textContent === this._middleRight.textContent && this._middleRight.textContent == this._bottomRight.textContent) {
+        this._topRight.style.backgroundColor = 'green'
+        this._middleRight.style.backgroundColor = 'green'
+        this._bottomRight.style.backgroundColor = 'green'
+
+        this.finishTheGame();
+      }
+    }
+    
+    // Matching diagonal lines
+    if(!this._topLeft.textContent === ' ' && !this._middleMiddle.textContent === ' ' && !this._bottomRight.textContent === ' ') {
+      
+      if(this._topLeft.textContent == this._middleMiddle.textContent && this._middleMiddle.textContent == this._bottomRight.textContent) {
+        this._topLeft.style.backgroundColor = 'green'
+        this._middleMiddle.style.backgroundColor = 'green'
+        this._bottomRight.style.backgroundColor = 'green'
+
+        this.finishTheGame();
+      }
+    }
+
+    if(!this._topRight.textContent === ' ' && !this._middleMiddle.textContent === ' ' && !this._bottomLeft.textContent === ' ') {
+      
+      if(this._topRight.textContent == this._middleMiddle.textContent && this._middleMiddle.textContent == this._bottomLeft.textContent) {
+        this._topRight.style.backgroundColor = 'green'
+        this._middleMiddle.style.backgroundColor = 'green'
+        this._bottomLeft.style.backgroundColor = 'green'
+
+        this.finishTheGame();
+      }
+    }
+  }
 
   /**
    * Clears up current game statistical information & Restarts the game
