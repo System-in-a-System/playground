@@ -32,19 +32,6 @@ template.innerHTML =
         <div id="bottomMiddle" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black; font-size: 18px; padding-top: 10px; text-align: center;">&nbsp;</div>
         <div id="bottomRight" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black; font-size: 18px; padding-top: 10px; text-align: center;">&nbsp;</div>
   </div>
-
-
-  <div id="tictocStatistics" 
-    style="
-      margin-top: 5px;
-      margin-left: 12px;
-      margin-right: 50px;
-      height: 50px;
-      width: 200px;
-      padding: 5px;">
-
-
-  </div>
 </div>
 `
 
