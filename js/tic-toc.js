@@ -112,6 +112,7 @@ export class TicToc extends WindowFrame {
     // Squares are listening for events
     this._topLeft.addEventListener('click', e => {
       this._topLeft.textContent = this.makeAMove()
+      this._topLeft.style.backgroundColor = 'grey'
       this._topLeft.style.pointerEvents = 'none'
 
       this.checkForMatch()
@@ -187,7 +188,7 @@ export class TicToc extends WindowFrame {
       this._bottomRight.style.pointerEvents = 'none'
 
       this.checkForMatch()
-      
+
       e.preventDefault()
     })
 
@@ -306,7 +307,7 @@ export class TicToc extends WindowFrame {
     // Matching diagonal lines
     if(!this._topLeft.textContent === ' ' && !this._middleMiddle.textContent === ' ' && !this._bottomRight.textContent === ' ') {
       
-      if(this._topLeft.textContent == this._middleMiddle.textContent && this._middleMiddle.textContent == this._bottomRight.textContent) {
+      if(this._topLeft.textContent === this._middleMiddle.textContent && this._middleMiddle.textContent === this._bottomRight.textContent) {
         this._topLeft.style.backgroundColor = 'green'
         this._middleMiddle.style.backgroundColor = 'green'
         this._bottomRight.style.backgroundColor = 'green'
@@ -317,7 +318,7 @@ export class TicToc extends WindowFrame {
 
     if(!this._topRight.textContent === ' ' && !this._middleMiddle.textContent === ' ' && !this._bottomLeft.textContent === ' ') {
       
-      if(this._topRight.textContent == this._middleMiddle.textContent && this._middleMiddle.textContent == this._bottomLeft.textContent) {
+      if(this._topRight.textContent === this._middleMiddle.textContent && this._middleMiddle.textContent === this._bottomLeft.textContent) {
         this._topRight.style.backgroundColor = 'green'
         this._middleMiddle.style.backgroundColor = 'green'
         this._bottomLeft.style.backgroundColor = 'green'
