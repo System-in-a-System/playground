@@ -112,6 +112,7 @@ export class TicToc extends WindowFrame {
     // Squares are listening for events
     this._topLeft.addEventListener('click', e => {
       this._topLeft.textContent = this.makeAMove()
+      this._topLeft.style.pointerEvents = 'none'
       e.preventDefault()
     })
 
