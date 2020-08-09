@@ -68,8 +68,6 @@ export class TicToc extends WindowFrame {
     this._bottomLeft = this._contentBlock.querySelector('#bottomLeft');
     this._bottomMiddle = this._contentBlock.querySelector('#bottomMiddle');
     this._bottomRight = this._contentBlock.querySelector('#bottomRight');
-
-    this._statistics = this._contentBlock.querySelector('#tictocStatistics')
  
 
     // Retrieve the nickname from local storage or set it to default 'Unknown Hero'
@@ -303,9 +301,6 @@ export class TicToc extends WindowFrame {
   finishTheGame () {
     // Disable pointer events for the tic toc board
     this._tictocPlayground.style.pointerEvents = 'none'
-
-    // Announce the end of the game
-    this._statistics.textContent = 'Game is over'
   }
 }
 
