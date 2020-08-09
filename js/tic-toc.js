@@ -10,8 +10,8 @@ template.innerHTML =
   
   <div id="tictocPlayground"
     style="
-      width: 155px; 
-      height: 155px;
+      width: 160px; 
+      height: 160px;
       padding: 1px;
       margin: 0 auto;
       margin-top: 15px;
