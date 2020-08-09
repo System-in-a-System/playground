@@ -16,21 +16,21 @@ template.innerHTML =
       margin: 0 auto;
       margin-top: 15px;">
 
-        <div id="topLeft" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black; font-size: 30px; padding: 10px;">&nbsp;</div>
-        <div id="topMiddle" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black; font-size: 30px; padding: 10px;">&nbsp;</div>
-        <div id="topRight" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black; font-size: 30px; padding: 10px;">&nbsp;</div>
+        <div id="topLeft" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black; font-size: 30px; padding: 3px;">&nbsp;</div>
+        <div id="topMiddle" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black; font-size: 30px; padding: 3px;">&nbsp;</div>
+        <div id="topRight" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black; font-size: 30px; padding: 3px;">&nbsp;</div>
 
         <br>
 
-        <div id="middleLeft" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black; font-size: 30px; padding: 10px;">&nbsp;</div>
-        <div id="middleMiddle" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black; font-size: 30px; padding: 10px;">&nbsp;</div>
-        <div id="middleRight" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black; font-size: 30px; padding: 10px;">&nbsp;</div>
+        <div id="middleLeft" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black; font-size: 30px; padding: 3px;">&nbsp;</div>
+        <div id="middleMiddle" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black; font-size: 30px; padding: 3px;">&nbsp;</div>
+        <div id="middleRight" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black; font-size: 30px; padding: 3px;">&nbsp;</div>
 
         <br>
 
-        <div id="bottomLeft" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black; font-size: 30px; padding: 10px;">&nbsp;</div>
-        <div id="bottomMiddle" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black; font-size: 30px; padding: 10px;">&nbsp;</div>
-        <div id="bottomRight" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black; font-size: 30px; padding: 10px;">&nbsp;</div>
+        <div id="bottomLeft" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black; font-size: 30px; padding: 3px;">&nbsp;</div>
+        <div id="bottomMiddle" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black; font-size: 30px; padding: 3px;">&nbsp;</div>
+        <div id="bottomRight" style="display: inline-block; height: 50px; width: 50px; border-style: solid; border-width: 0.3px; border-color: black; font-size: 30px; padding: 3px;">&nbsp;</div>
   </div>
 
 
