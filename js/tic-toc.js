@@ -8,10 +8,11 @@ template.innerHTML =
 `
 <div id="tictocBoard">
   
-  <div id="tictocPlayground" tabindex="0" 
+  <div id="tictocPlayground"
     style="
-      width:fit-content; 
-      height:fit-content;
+      width: 155px; 
+      height: 155px;
+      padding: 1px;
       margin: 0 auto;
       margin-top: 15px;
       background-color: white;
