@@ -112,7 +112,6 @@ export class TicToc extends WindowFrame {
     // Squares are listening for events
     this._topLeft.addEventListener('click', e => {
       this._topLeft.textContent = this.makeAMove()
-      this._topLeft.style.backgroundColor = 'grey'
       this._topLeft.style.pointerEvents = 'none'
 
       this.checkForMatch()
@@ -237,7 +236,9 @@ export class TicToc extends WindowFrame {
   checkForMatch() {
 
     // Matching horizontal lines
-    if(!this._topLeft.textContent === ' ' && !this._topMiddle.textContent === ' ' && !this._topRight.textContent === ' ') {
+    if(this._topLeft.textContent === 'X' || this._topLeft.textContent === '0' 
+      && this._topMiddle.textContent === 'X' || this._topMiddle.textContent === '0' 
+      && this._topRight.textContent === 'X' || this._topRight.textContent === '0') {
         
       if(this._topLeft.textContent === this._topMiddle.textContent && this._topMiddle.textContent === this._topRight.textContent) {
         this._topLeft.style.backgroundColor = 'green'
