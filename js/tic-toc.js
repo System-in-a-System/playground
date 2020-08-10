@@ -59,19 +59,19 @@ export class TicToc extends WindowFrame {
 
     this._tictocPlayground = this._contentBlock.querySelector('#tictocPlayground')
     
-    this._topLeft = this._contentBlock.querySelector('#topLeft');
-    this._topMiddle = this._contentBlock.querySelector('#topMiddle');
-    this._topRight = this._contentBlock.querySelector('#topRight');
-    this._middleLeft = this._contentBlock.querySelector('#middleLeft');
-    this._middleMiddle = this._contentBlock.querySelector('#middleMiddle');
-    this._middleRight = this._contentBlock.querySelector('#middleRight');
-    this._bottomLeft = this._contentBlock.querySelector('#bottomLeft');
-    this._bottomMiddle = this._contentBlock.querySelector('#bottomMiddle');
-    this._bottomRight = this._contentBlock.querySelector('#bottomRight');
- 
+    this._topLeft = this._contentBlock.querySelector('#topLeft')
+    this._topMiddle = this._contentBlock.querySelector('#topMiddle')
+    this._topRight = this._contentBlock.querySelector('#topRight')
+    this._middleLeft = this._contentBlock.querySelector('#middleLeft')
+    this._middleMiddle = this._contentBlock.querySelector('#middleMiddle')
+    this._middleRight = this._contentBlock.querySelector('#middleRight')
+    this._bottomLeft = this._contentBlock.querySelector('#bottomLeft')
+    this._bottomMiddle = this._contentBlock.querySelector('#bottomMiddle')
+    this._bottomRight = this._contentBlock.querySelector('#bottomRight')
 
-    // Retrieve the nickname from local storage or set it to default 'Unknown Hero'
-    this._nickname = window.localStorage.getItem('nickname') || 'Unknown Hero'    
+
+    // Set starting figure to a cross
+    this._cross = true;
   }
 
   /**
@@ -84,99 +84,81 @@ export class TicToc extends WindowFrame {
 
     // Squares are listening for events
     this._topLeft.addEventListener('click', e => {
-      this._topLeft.textContent = 'X'
+      this._topLeft.textContent = this.makeAMove()
       this._topLeft.style.pointerEvents = 'none'
-      this.checkForMatch()
 
-      this.counterMove()
       this.checkForMatch()
 
       e.preventDefault()
     })
 
     this._topMiddle.addEventListener('click', e => {
-      this._topMiddle.textContent = 'X'
+      this._topMiddle.textContent = this.makeAMove()
       this._topMiddle.style.pointerEvents = 'none'
-      this.checkForMatch()
 
-      this.counterMove()
       this.checkForMatch()
 
       e.preventDefault()
     })
 
     this._topRight.addEventListener('click', e => {
-      this._topRight.textContent = 'X'
+      this._topRight.textContent = this.makeAMove()
       this._topRight.style.pointerEvents = 'none'
-      this.checkForMatch()
 
-      this.counterMove()
       this.checkForMatch()
 
       e.preventDefault()
     })
 
     this._middleLeft.addEventListener('click', e => {
-      this._middleLeft.textContent = 'X'
+      this._middleLeft.textContent = this.makeAMove()
       this._middleLeft.style.pointerEvents = 'none'
-      this.checkForMatch()
 
-      this.counterMove()
       this.checkForMatch()
 
       e.preventDefault()
     })
 
     this._middleMiddle.addEventListener('click', e => {
-      this._middleMiddle.textContent = 'X'
+      this._middleMiddle.textContent = this.makeAMove()
       this._middleMiddle.style.pointerEvents = 'none'
-      this.checkForMatch()
 
-      this.counterMove()
       this.checkForMatch()
 
       e.preventDefault()
     })
 
     this._middleRight.addEventListener('click', e => {
-      this._middleRight.textContent = 'X'
+      this._middleRight.textContent = this.makeAMove()
       this._middleRight.style.pointerEvents = 'none'
-      this.checkForMatch()
 
-      this.counterMove()
       this.checkForMatch()
 
       e.preventDefault()
     })
     
     this._bottomLeft.addEventListener('click', e => {
-      this._bottomLeft.textContent = 'X'
+      this._bottomLeft.textContent = this.makeAMove()
       this._bottomLeft.style.pointerEvents = 'none'
-      this.checkForMatch()
 
-      this.counterMove()
       this.checkForMatch()
 
       e.preventDefault()
     })
 
     this._bottomMiddle.addEventListener('click', e => {
-      this._bottomMiddle.textContent = 'X'
+      this._bottomMiddle.textContent = this.makeAMove()
       this._bottomMiddle.style.pointerEvents = 'none'
-      this.checkForMatch()
 
-      this.counterMove()
       this.checkForMatch()
 
       e.preventDefault()
     })
 
     this._bottomRight.addEventListener('click', e => {
-      this._bottomRight.textContent = 'X'
+      this._bottomRight.textContent = this.makeAMove()
       this._bottomRight.style.pointerEvents = 'none'
-      this.checkForMatch()
 
-      this.counterMove()
       this.checkForMatch()
 
       e.preventDefault()
@@ -192,6 +174,25 @@ export class TicToc extends WindowFrame {
     this._exitButton.addEventListener('click', e => {
       this.remove()
     })
+  }
+  
+  /**
+   * Makes a move
+   * 
+   * @memberof TicToc
+   */
+  makeAMove () {
+    let sign = ''
+
+    if (this._cross) {
+      sign = 'X'
+      this._cross = false
+    } else {
+      sign = '0'
+      this._cross = true
+    }
+
+    return sign
   }
 
   /** Checks if the preceding move made a match in some of the lines 
@@ -286,149 +287,6 @@ export class TicToc extends WindowFrame {
 
         this.finishTheGame();
       }
-    }
-  }
-
-  /**
-   * Provides a counter move from the system
-   * 
-   * @memberof TicToc
-   */
-  counterMove() {
-    
-    // Horizontal lines countermove
-    if(this._topLeft.textContent === this._topMiddle.textContent) {
-      this._topRight.textContent = '0'  
-      this._topRight.style.pointerEvents = 'none'
-      return   
-    } 
-
-    if(this._topLeft.textContent === this._topRight.textContent) {
-      this._topMiddle.textContent = '0'
-      this._topRight.style.pointerEvents = 'none'
-      return
-    }
-
-    if(this._topMiddle.textContent === this._topRight.textContent) {
-      this._topLeft.textContent = '0'
-      this._topLeft.style.pointerEvents = 'none'
-      return
-    }
-
-
-    if(this._middleLeft.textContent === this._middleMiddle.textContent) {
-      this._middleRight.textContent = '0'  
-      this._middleRight.style.pointerEvents = 'none' 
-      return   
-    } 
-
-    if(this._middleLeft.textContent === this._middleRight.textContent) {
-      this._middleMiddle.textContent = '0'
-      this._middleRight.style.pointerEvents = 'none'
-      return
-    }
-
-    if(this._middleMiddle.textContent === this._middleRight.textContent) {
-      this._middleLeft.textContent = '0'
-      this._middleLeft.style.pointerEvents = 'none'
-      return
-    }
-
-
-    if(this._bottomLeft.textContent === this._bottomMiddle.textContent) {
-      this._bottomRight.textContent = '0'  
-      this._bottomRight.style.pointerEvents = 'none'
-      return    
-    } 
-
-    if(this._bottomLeft.textContent === this._bottomRight.textContent) {
-      this._bottomMiddle.textContent = '0'
-      this._bottomRight.style.pointerEvents = 'none'
-      return
-    }
-
-    if(this._bottomMiddle.textContent === this._bottomRight.textContent) {
-      this._bottomLeft.textContent = '0'
-      this._bottomLeft.style.pointerEvents = 'none'
-      return
-    }
-
-
-    // Vertical lines countermove
-    if(this._topLeft.textContent === this._middleLeft.textContent) {
-      this._bottomLeft.textContent = '0'
-      this._bottomLeft.style.pointerEvents = 'none'
-      return
-    }
-
-    if(this._topLeft.textContent === this._bottomLeft.textContent) {
-      this._middleLeft.textContent = '0'
-      this._middleLeft.style.pointerEvents = 'none'
-      return
-    }
-
-    if(this._middleLeft.textContent === this._bottomLeft.textContent) {
-      this._topLeft.textContent = '0'
-      this._topLeft.style.pointerEvents = 'none'
-      return
-    }
-
-
-    if(this._topMiddle.textContent === this._middleMiddle.textContent) {
-      this._bottomMiddle.textContent = '0'
-      this._bottomMiddle.style.pointerEvents = 'none'
-      return
-    }
-
-    if(this._topMiddle.textContent === this._bottomMiddle.textContent) {
-      this._middleMiddle.textContent = '0'
-      this._middleMiddle.style.pointerEvents = 'none'
-      return
-    }
-
-    if(this._middleMiddle.textContent === this._bottomMiddle.textContent) {
-      this._topMiddle.textContent = '0'
-      this._topMiddle.style.pointerEvents = 'none'
-      return
-    }
-
-
-    if(this._topRight.textContent === this._middleRight.textContent) {
-      this._bottomRight.textContent = '0'
-      this._bottomRight.style.pointerEvents = 'none'
-      return
-    }
-
-    if(this._topRight.textContent === this._bottomRight.textContent) {
-      this._middleRight.textContent = '0'
-      this._middleRight.style.pointerEvents = 'none'
-      return
-    }
-
-    if(this._middleRight.textContent === this._bottomRight.textContent) {
-      this._topRight.textContent = '0'
-      this._topRight.style.pointerEvents = 'none'
-      return
-    }
-
-
-    // Diagonal lines countermove
-    if(this._topLeft.textContent === this._middleMiddle.textContent) {
-      this._bottomRight.textContent = '0'
-      this._bottomRight.style.pointerEvents = 'none'
-      return
-    }
-
-    if(this._topLeft.textContent === this._bottomRight.textContent) {
-      this._middleMiddle.textContent = '0'
-      this._middleMiddle.style.pointerEvents = 'none'
-      return
-    }
-
-    if(this._middleMiddle.textContent === this._bottomRight.textContent) {
-      this._topLeft.textContent = '0'
-      this._topLeft.style.pointerEvents = 'none'
-      return
     }
   }
 
