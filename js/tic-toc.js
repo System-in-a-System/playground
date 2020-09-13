@@ -6,7 +6,7 @@ const template = document.createElement('template')
 
 template.innerHTML =
 `
-<div id="tictocBoard">
+<div id="tictocBoard" style="background-color:rgb(189, 185, 185);">
   
   <div id="tictocPlayground"
     style="
